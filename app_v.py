@@ -126,11 +126,12 @@ tion.Given an answer and question, assign a
 ered relevant to the extent that it exclusively con
 tains information that is needed to answer the ques
 tion. In particular, this metric aims to penalise the
- inclusion of redundant information.
- Given an answer and context, assign a
- score for Context Relevance in the range 0-10 with reasoning.Start the response with mentioninng the metric and the score.
+ inclusion of redundant/irrelevant information.
+ Given a question and context, assign a
+ score for Context Relevance in the range 0-10 with reasoning.Do not be leniant while giving the score.Start the response with mentioninng the metric and the score.
+
+ question: {user_question}
  context: {context_docs}
- answer: {response}
 
 """
     llm = genai.GenerativeModel('gemini-2.0-flash')  
